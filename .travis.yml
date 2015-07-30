@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+- 0.10.39
+
+env:
+  global:
+    secure: JUBHvJBUqdLhiLRHnTa8WKLMemYyToi9AsWmpow09P0tb/32K7UvM1dMxuYQd0iLqi9NDstvFZxh2U/IgB3Ld+OnK3eMF7xqyQ3H5bxe1NHq5y+hTQeTyNyeztKf9xuNMic1tMzQ/X2W3mu1eVCRp5LLgY0r10sdAVto5z6QSYTNpDNxiSzV+M3ArsMvHf1CvuPqYywykXG7m9iYwcKnioUEKCITm37TCQhsZWO8jjGUvKhXMaQ4zYLFwQHQoLWTYbVELVQoHzyKUtE+1vErHl+nIead4qNv3uVUSHM9x0qqJiYJwvhuaUH7mCWrQ3cw9loMnXRoxIVsY9DQbtwdcUbRz2koujQKCO73L/GB6BZw3o+JTyuBbY0ZdBKP8WdNjf9DFwNaHqvhPq4qmX6KeM44CpX3A8TCC5JqGPS9Tj78wiU5V1Fy2iucXbYKg6r0iYdQhjK3ygeJ0cg2GiMTR6mpJn17r8jtpuh/t3VYLhXSKh5NmIc69S6qh9Ox77N2dKM1N95fe8Sha9QPQfNaqi1XUM8M1QDtq1bIC/o8ELATi8Ep0QpkPfNhs9rQtmOAQ2sJf4DTC/4PTQvvhDA0+E+fXxf1XE11AHdij/ukVHvnrV+WZMaPaWfW663wWzjecG4zXv7JmXsJNH6XJlvJ1mGoTNXutz8CiBEDZoT6LOg=
+
+install:
+- npm install
+
+script:
+- npm test
+
+after_success:
+- npm run build
+- bash deploy.bash
