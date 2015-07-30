@@ -14,5 +14,5 @@ script:
 - npm test
 
 after_success:
-- npm run build
+- npm run dist
 - bash deploy.bash
