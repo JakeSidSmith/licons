@@ -27,10 +27,32 @@
 
 /* @group Icons */
 
-.generateLicons(@class-name, @size, @line-width) {
+.generateLicons(@class-name, @size, @line-width, @border-radius, @border-width) {
 
   .@{class-name} {
     .baseLicon(@size);
+    background-color: @licon-bg;
+
+    &.licon-rounded {
+      border-radius: @border-radius;
+    }
+
+    &.licon-circle {
+      border-radius: 50%;
+    }
+
+    &.licon-border {
+      border: @border-width solid @licon-border-color;
+    }
+
+    &:hover {
+      background-color: @licon-bg-hover;
+    }
+
+    &:active {
+      background-color: @licon-bg-active;
+      .transition(ease-in-out background-color 0s);
+    }
 
     &.licon-menu {
       span {
@@ -69,37 +91,8 @@
 
 /* @group Generate Licon Sizes */
 
-.generateLicons(licon, @licon-size-base, @licon-line-width-base);
-.generateLicons(licon-small, @licon-size-small, @licon-line-width-small);
-.generateLicons(licon-large, @licon-size-large, @licon-line-width-large);
+.generateLicons(licon, @licon-size-base, @licon-line-width-base, @licon-border-radius-base, @licon-border-width-base);
+.generateLicons(licon-small, @licon-size-small, @licon-line-width-small, @licon-border-radius-small, @licon-border-width-small);
+.generateLicons(licon-large, @licon-size-large, @licon-line-width-large, @licon-border-radius-large, @licon-border-width-large);
 
 /* @end Generate Licon Sizes */
-
-/* @group Icon Styles */
-
-.licon {
-  background-color: @licon-bg;
-
-  &.licon-rounded {
-    border-radius: @licon-border-radius-base;
-  }
-
-  &.licon-circle {
-    border-radius: 50%;
-  }
-
-  &.licon-border {
-    border: @licon-border-width-base solid @licon-border-color;
-  }
-
-  &:hover {
-    background-color: @licon-bg-hover;
-  }
-
-  &:active {
-    background-color: @licon-bg-active;
-    .transition(ease-in-out background-color 0s);
-  }
-}
-
-/* @end Icon Styles */
