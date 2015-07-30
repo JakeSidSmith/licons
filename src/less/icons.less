@@ -6,12 +6,12 @@
   position: absolute;
 }
 
-.baseLicon() {
+.baseLicon(@size) {
   position: relative;
   box-sizing: border-box;
   display: inline-block;
-  width: @licon-size;
-  height: @licon-size;
+  width: @size;
+  height: @size;
 
   span,
   &::before,
@@ -36,34 +36,34 @@
 
 /* @group Icons */
 
-.generateLicons(@licon-size) {
+.generateLicons(@size, @line-width) {
 
   .licon {
-    .baseLicon();
+    .baseLicon(@size);
 
     span {
-      top: @licon-size * 0.5 - @licon-border-width-base;
-      left: @licon-size * 0.1;
-      margin-top: -1px;
+      top: @size * 0.5 - @licon-border-width-base;
+      left: @size * 0.1;
+      margin-top: -@line-width / 2;
       margin-left: 0;
-      width: @licon-size * 0.8 - @licon-border-width-base * 2;
+      width: @size * 0.8 - @licon-border-width-base * 2;
       height: 0;
-      border-top: 2px solid @licon-color;
+      border-top: @line-width solid @licon-color;
 
       &::before {
-        top: @licon-size * 0.2 - @licon-border-width-base;
-        margin-top: -1px;
-        width: @licon-size * 0.8 - @licon-border-width-base * 2;
+        top: @size * 0.2 - @licon-border-width-base;
+        margin-top: -@line-width / 2;
+        width: @size * 0.8 - @licon-border-width-base * 2;
         height: 0;
-        border-top: 2px solid @licon-color;
+        border-top: @line-width solid @licon-color;
       }
 
       &::after {
-        top: @licon-size * -0.2 - @licon-border-width-base;
-        margin-top: -1px;
-        width: @licon-size * 0.8 - @licon-border-width-base * 2;
+        top: @size * -0.2 - @licon-border-width-base;
+        margin-top: -@line-width / 2;
+        width: @size * 0.8 - @licon-border-width-base * 2;
         height: 0;
-        border-top: 2px solid @licon-color;
+        border-top: @line-width solid @licon-color;
       }
     }
   }
@@ -74,7 +74,7 @@
 
 /* @group Generate Licon Sizes */
 
-.generateLicons(@licon-size-base);
+.generateLicons(@licon-size-base, @licon-line-width-base);
 
 /* @end Generate Licon Sizes */
 
