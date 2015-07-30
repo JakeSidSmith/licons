@@ -2,7 +2,7 @@
   "name": "licons",
   "version": "0.0.0",
   "description": "A group of icons made from HTML & CSS that can transiton between each other",
-  "main": "src/less/index.less",
+  "main": "src/js/index.js",
   "scripts": {
     "start": "npm run build && http-server examples -o -c-1 & npm run watch-less",
     "watch-less": "watch 'npm run build-less' src/less/",
