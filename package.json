@@ -37,6 +37,8 @@
     "url": "https://github.com/JakeSidSmith/licons/issues"
   },
   "homepage": "https://github.com/JakeSidSmith/licons",
+  "dependencies": {
+  },
   "devDependencies": {
     "http-server": "=0.8.0",
     "less": "=2.5.1",
