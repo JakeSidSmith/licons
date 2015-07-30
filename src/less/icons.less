@@ -12,6 +12,7 @@
   display: inline-block;
   width: @size;
   height: @size;
+  .transition(ease-in-out background-color 0.1s);
 
   span,
   &::before,
@@ -71,16 +72,28 @@
 
 /* @group Icon Styles */
 
-.licon.rounded {
-  border-radius: @licon-border-radius-base;
-}
+.licon {
+  background-color: @licon-bg;
 
-.licon.circle {
-  border-radius: 50%;
-}
+  &.rounded {
+    border-radius: @licon-border-radius-base;
+  }
 
-.licon.border {
-  border: @licon-border-width-base solid @licon-border-color;
+  &.circle {
+    border-radius: 50%;
+  }
+
+  &.border {
+    border: @licon-border-width-base solid @licon-border-color;
+  }
+
+  &:hover {
+    background-color: @licon-bg-hover;
+  }
+
+  &:active {
+    background-color: @licon-bg-active;
+  }
 }
 
 /* @end Icon Styles */
