@@ -25,7 +25,9 @@
       }
 
       // Border
-      className = className.concat(props.border ? ' licon-border' : '');
+      if (props.border) {
+        className = className.concat(' licon-border');
+      }
 
       return className;
     },
