@@ -1,0 +1,226 @@
+/* @group Colors */
+/* @end Colors */
+/* @group Sizes */
+/* @end Sizes */
+/* @group Base Styles */
+/* @end Base Styles */
+/* @group Icons */
+/* @end Icons */
+/* @group Generate Licon Sizes */
+.licon {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-transition: ease-in-out background-color 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s;
+  -o-transition: ease-in-out background-color 0.1s;
+  transition: ease-in-out background-color 0.1s;
+  background-color: transparent;
+}
+.licon span,
+.licon::before,
+.licon::after {
+  -webkit-transition: ease-in-out all 0.2s;
+  -moz-transition: ease-in-out all 0.2s;
+  -ms-transition: ease-in-out all 0.2s;
+  -o-transition: ease-in-out all 0.2s;
+  transition: ease-in-out all 0.2s;
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+.licon.licon-rounded {
+  border-radius: 4px;
+}
+.licon.licon-circle {
+  border-radius: 50%;
+}
+.licon.licon-border {
+  border: 1px solid #dddddd;
+}
+.licon:hover {
+  background-color: #eeeeee;
+}
+.licon:active {
+  background-color: #cccccc;
+  -webkit-transition: ease-in-out background-color 0s;
+  -moz-transition: ease-in-out background-color 0s;
+  -ms-transition: ease-in-out background-color 0s;
+  -o-transition: ease-in-out background-color 0s;
+  transition: ease-in-out background-color 0s;
+}
+.licon.licon-menu span {
+  top: 17px;
+  left: 7.2px;
+  margin-top: -1px;
+  margin-left: 0;
+  width: 19.6px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon.licon-menu::before {
+  top: 11.6px;
+  left: 7.2px;
+  margin-top: -1px;
+  width: 19.6px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon.licon-menu::after {
+  top: 22.4px;
+  left: 7.2px;
+  margin-top: -1px;
+  width: 19.6px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon-small {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-transition: ease-in-out background-color 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s;
+  -o-transition: ease-in-out background-color 0.1s;
+  transition: ease-in-out background-color 0.1s;
+  background-color: transparent;
+}
+.licon-small span,
+.licon-small::before,
+.licon-small::after {
+  -webkit-transition: ease-in-out all 0.2s;
+  -moz-transition: ease-in-out all 0.2s;
+  -ms-transition: ease-in-out all 0.2s;
+  -o-transition: ease-in-out all 0.2s;
+  transition: ease-in-out all 0.2s;
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+.licon-small.licon-rounded {
+  border-radius: 2px;
+}
+.licon-small.licon-circle {
+  border-radius: 50%;
+}
+.licon-small.licon-border {
+  border: 1px solid #dddddd;
+}
+.licon-small:hover {
+  background-color: #eeeeee;
+}
+.licon-small:active {
+  background-color: #cccccc;
+  -webkit-transition: ease-in-out background-color 0s;
+  -moz-transition: ease-in-out background-color 0s;
+  -ms-transition: ease-in-out background-color 0s;
+  -o-transition: ease-in-out background-color 0s;
+  transition: ease-in-out background-color 0s;
+}
+.licon-small.licon-menu span {
+  top: 11px;
+  left: 4.8px;
+  margin-top: -1px;
+  margin-left: 0;
+  width: 12.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon-small.licon-menu::before {
+  top: 7.4px;
+  left: 4.8px;
+  margin-top: -1px;
+  width: 12.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon-small.licon-menu::after {
+  top: 14.6px;
+  left: 4.8px;
+  margin-top: -1px;
+  width: 12.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+}
+.licon-large {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-transition: ease-in-out background-color 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s;
+  -o-transition: ease-in-out background-color 0.1s;
+  transition: ease-in-out background-color 0.1s;
+  background-color: transparent;
+}
+.licon-large span,
+.licon-large::before,
+.licon-large::after {
+  -webkit-transition: ease-in-out all 0.2s;
+  -moz-transition: ease-in-out all 0.2s;
+  -ms-transition: ease-in-out all 0.2s;
+  -o-transition: ease-in-out all 0.2s;
+  transition: ease-in-out all 0.2s;
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+.licon-large.licon-rounded {
+  border-radius: 6px;
+}
+.licon-large.licon-circle {
+  border-radius: 50%;
+}
+.licon-large.licon-border {
+  border: 1px solid #dddddd;
+}
+.licon-large:hover {
+  background-color: #eeeeee;
+}
+.licon-large:active {
+  background-color: #cccccc;
+  -webkit-transition: ease-in-out background-color 0s;
+  -moz-transition: ease-in-out background-color 0s;
+  -ms-transition: ease-in-out background-color 0s;
+  -o-transition: ease-in-out background-color 0s;
+  transition: ease-in-out background-color 0s;
+}
+.licon-large.licon-menu span {
+  top: 23px;
+  left: 9.6px;
+  margin-top: -2px;
+  margin-left: 0;
+  width: 26.8px;
+  height: 0;
+  border-top: 4px solid #555555;
+}
+.licon-large.licon-menu::before {
+  top: 15.8px;
+  left: 9.6px;
+  margin-top: -2px;
+  width: 26.8px;
+  height: 0;
+  border-top: 4px solid #555555;
+}
+.licon-large.licon-menu::after {
+  top: 30.2px;
+  left: 9.6px;
+  margin-top: -2px;
+  width: 26.8px;
+  height: 0;
+  border-top: 4px solid #555555;
+}
+/* @end Generate Licon Sizes */
