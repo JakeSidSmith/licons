@@ -26,6 +26,12 @@
     "minimal"
   ],
   "author": "Jake 'Sid' Smith",
+  "contributors": [
+    {
+      "name": "Jake 'Sid' Smith",
+      "url": "https://githib.com/JakeSidSmith"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JakeSidSmith/licons/issues"
