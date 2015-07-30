@@ -30,7 +30,9 @@
 
   .licon {
     .baseLicon(@size);
+  }
 
+  .licon-menu {
     span {
       top: @size * 0.5 - @licon-border-width-base;
       left: @size * 0.2;
@@ -75,15 +77,15 @@
 .licon {
   background-color: @licon-bg;
 
-  &.rounded {
+  &.licon-rounded {
     border-radius: @licon-border-radius-base;
   }
 
-  &.circle {
+  &.licon-circle {
     border-radius: 50%;
   }
 
-  &.border {
+  &.licon-border {
     border: @licon-border-width-base solid @licon-border-color;
   }
 
