@@ -1,0 +1,39 @@
+{
+  "name": "licons",
+  "version": "0.0.0",
+  "description": "A group of icons made from HTML & CSS that can transiton between each other",
+  "main": "src/less/index.less",
+  "scripts": {
+    "start": "npm run build && http-server examples -o -c-1 & npm run watch-less",
+    "watch-less": "watch 'npm run build-less' src/less/",
+    "build-less": "mkdir -p examples/build/css && lessc examples/src/less/index.less > examples/build/css/index.css && echo 'Less compiled'",
+    "build": "ulimit -n 512 && npm run build-less",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JakeSidSmith/licons"
+  },
+  "keywords": [
+    "icon",
+    "icons",
+    "line",
+    "html",
+    "css",
+    "transition",
+    "transform",
+    "simple",
+    "minimal"
+  ],
+  "author": "Jake 'Sid' Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JakeSidSmith/licons/issues"
+  },
+  "homepage": "https://github.com/JakeSidSmith/licons",
+  "devDependencies": {
+    "http-server": "=0.8.0",
+    "less": "=2.5.1",
+    "watch": "=0.16.0"
+  }
+}

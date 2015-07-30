@@ -1,0 +1,95 @@
+/* @group Base Styles */
+
+.baseLiconInner() {
+  content: ' ';
+  display: block;
+  position: absolute;
+}
+
+.baseLicon() {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: @licon-size;
+  height: @licon-size;
+
+  span,
+  &::before,
+  &::after {
+    .transition(ease-in-out all 0.2s);
+  }
+
+  span {
+    .baseLiconInner();
+
+    &::before {
+      .baseLiconInner();
+    }
+
+    &::after {
+      .baseLiconInner();
+    }
+  }
+}
+
+/* @end Base Styles */
+
+/* @group Icons */
+
+.generateLicons(@licon-size) {
+
+  .licon {
+    .baseLicon();
+
+    span {
+      top: @licon-size * 0.5 - @licon-border-width-base;
+      left: @licon-size * 0.1;
+      margin-top: -1px;
+      margin-left: 0;
+      width: @licon-size * 0.8 - @licon-border-width-base * 2;
+      height: 0;
+      border-top: 2px solid @licon-color;
+
+      &::before {
+        top: @licon-size * 0.2 - @licon-border-width-base;
+        margin-top: -1px;
+        width: @licon-size * 0.8 - @licon-border-width-base * 2;
+        height: 0;
+        border-top: 2px solid @licon-color;
+      }
+
+      &::after {
+        top: @licon-size * -0.2 - @licon-border-width-base;
+        margin-top: -1px;
+        width: @licon-size * 0.8 - @licon-border-width-base * 2;
+        height: 0;
+        border-top: 2px solid @licon-color;
+      }
+    }
+  }
+
+}
+
+/* @end Icons */
+
+/* @group Generate Licon Sizes */
+
+.generateLicons(@licon-size-base);
+
+/* @end Generate Licon Sizes */
+
+/* @group Icon Styles */
+
+.licon.rounded {
+  border-radius: @licon-border-radius-base;
+}
+
+.licon.circle {
+  border-radius: 50%;
+}
+
+.licon.border {
+  border: @licon-border-width-base solid @licon-border-color;
+}
+
+/* @end Icon Styles */
