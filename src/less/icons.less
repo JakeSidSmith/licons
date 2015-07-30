@@ -26,39 +26,39 @@
 
 /* @group Icons */
 
-.generateLicons(@size, @line-width) {
+.generateLicons(@class-name, @size, @line-width) {
 
-  .licon {
+  .@{class-name} {
     .baseLicon(@size);
-  }
 
-  .licon-menu {
-    span {
-      top: @size * 0.5 - @licon-border-width-base;
-      left: @size * 0.2;
-      margin-top: -@line-width / 2;
-      margin-left: 0;
-      width: @size * 0.6 - @licon-border-width-base * 2;
-      height: 0;
-      border-top: @line-width solid @licon-color;
-    }
+    &.licon-menu {
+      span {
+        top: @size * 0.5 - @licon-border-width-base;
+        left: @size * 0.2;
+        margin-top: -@line-width / 2;
+        margin-left: 0;
+        width: @size * 0.6 - @licon-border-width-base * 2;
+        height: 0;
+        border-top: @line-width solid @licon-color;
+      }
 
-    &::before {
-      top: @size * 0.35 - @licon-border-width-base;
-      left: @size * 0.2;
-      margin-top: -@line-width / 2;
-      width: @size * 0.6 - @licon-border-width-base * 2;
-      height: 0;
-      border-top: @line-width solid @licon-color;
-    }
+      &::before {
+        top: @size * 0.35 - @licon-border-width-base;
+        left: @size * 0.2;
+        margin-top: -@line-width / 2;
+        width: @size * 0.6 - @licon-border-width-base * 2;
+        height: 0;
+        border-top: @line-width solid @licon-color;
+      }
 
-    &::after {
-      top: @size * 0.65 - @licon-border-width-base;
-      left: @size * 0.2;
-      margin-top: -@line-width / 2;
-      width: @size * 0.6 - @licon-border-width-base * 2;
-      height: 0;
-      border-top: @line-width solid @licon-color;
+      &::after {
+        top: @size * 0.65 - @licon-border-width-base;
+        left: @size * 0.2;
+        margin-top: -@line-width / 2;
+        width: @size * 0.6 - @licon-border-width-base * 2;
+        height: 0;
+        border-top: @line-width solid @licon-color;
+      }
     }
   }
 
@@ -68,7 +68,9 @@
 
 /* @group Generate Licon Sizes */
 
-.generateLicons(@licon-size-base, @licon-line-width-base);
+.generateLicons(licon, @licon-size-base, @licon-line-width-base);
+.generateLicons(licon-small, @licon-size-small, @licon-line-width-small);
+.generateLicons(licon-large, @licon-size-large, @licon-line-width-large);
 
 /* @end Generate Licon Sizes */
 
