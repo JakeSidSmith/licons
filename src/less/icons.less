@@ -57,7 +57,7 @@
 
     &.licon-menu {
       span {
-        top: @size * 0.5 - @licon-border-width-base;
+        top: round(@size * 0.5 - @licon-border-width-base);
         left: @size * 0.2;
         margin-top: -@line-width / 2;
         margin-left: 0;
@@ -67,7 +67,7 @@
       }
 
       &::before {
-        top: @size * 0.35 - @licon-border-width-base;
+        top: round(@size * 0.35 - @licon-border-width-base);
         left: @size * 0.2;
         margin-top: -@line-width / 2;
         width: @size * 0.6 - @licon-border-width-base * 2;
@@ -76,7 +76,7 @@
       }
 
       &::after {
-        top: @size * 0.65 - @licon-border-width-base;
+        top: round(@size * 0.65 - @licon-border-width-base);
         left: @size * 0.2;
         margin-top: -@line-width / 2;
         width: @size * 0.6 - @licon-border-width-base * 2;
