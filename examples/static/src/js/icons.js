@@ -17,7 +17,8 @@
     'square',
     'square-rounded',
     'play',
-    'pause'
+    'pause',
+    'stop'
   ];
 
   icons.sort();
