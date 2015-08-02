@@ -19,7 +19,7 @@
     'play',
     'pause',
     'stop',
-    'fastforward',
+    'fast-forward',
     'rewind'
   ];
 
