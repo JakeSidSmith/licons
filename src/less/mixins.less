@@ -5,11 +5,19 @@
 }
 
 .transition(@value) {
-  -webkit-transition: @value;
-  -moz-transition: @value;
-  -ms-transition: @value;
-  -o-transition: @value;
-  transition: @value;
+  -webkit-transition+: @value;
+  -moz-transition+: @value;
+  -ms-transition+: @value;
+  -o-transition+: @value;
+  transition+: @value;
+}
+
+.transition2(@value1, @value2) {
+  -webkit-transition+: @value1, @value2;
+  -moz-transition+: @value1, @value2;
+  -ms-transition+: @value1, @value2;
+  -o-transition+: @value1, @value2;
+  transition+: @value1, @value2;
 }
 
 .transform(@value) {
