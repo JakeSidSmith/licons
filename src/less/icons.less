@@ -223,9 +223,9 @@
         border-radius: 50%;
         border: @line-width solid transparent;
         border-top: @line-width solid @licon-color;
-        top: @inner-size * 0.3;
+        top: round(@inner-size * 0.3);
         left: 0;
-        marign-top: @line-width / 2;
+        margin-top: -@line-width / 2;
         width: @inner-size;
         height: @inner-size;
       }
@@ -234,22 +234,22 @@
         border-radius: 50%;
         border: @line-width solid transparent;
         border-top: @line-width solid @licon-color;
-        top: @inner-size * 0.5;
-        left: @inner-size * 0.2;
-        marign-top: @line-width / 2;
-        width: @inner-size * 0.6;
-        height: @inner-size * 0.6;
+        top: round(@inner-size * 0.5);
+        left: round(@inner-size * 0.2);
+        margin-top: -@line-width / 2;
+        width: round(@inner-size * 0.6);
+        height: round(@inner-size * 0.6);
       }
 
       &::after {
         border-radius: 50%;
         border: @line-width solid transparent;
         border-top: @line-width solid @licon-color;
-        top: @inner-size * 0.7;
-        left: @inner-size * 0.4;
-        marign-top: @line-width / 2;
-        width: @inner-size * 0.2;
-        height: @inner-size * 0.2;
+        top: round(@inner-size * 0.7);
+        left: round(@inner-size * 0.4);
+        margin-top: -@line-width / 2;
+        width: round(@inner-size * 0.2);
+        height: round(@inner-size * 0.2);
       }
     }
 
