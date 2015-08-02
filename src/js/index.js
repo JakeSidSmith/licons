@@ -46,7 +46,8 @@
 
     render: function () {
       return (
-        <span className={this.state.className}>
+        <span {...this.props}
+          className={this.state.className + (this.props.className ? ' '.concat(this.props.className) : '')}>
           <span></span>
         </span>
       );
