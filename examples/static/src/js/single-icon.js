@@ -48,8 +48,8 @@
     getInitialState: function () {
       return {
         iconIndex: 0,
-        border: true,
-        shape: 'round',
+        border: false,
+        shape: null,
         size: null
       };
     },
@@ -100,7 +100,7 @@
                 <label>
                   Default
                   <input type='radio'
-                    checked={this.state.shape === null}
+                    checked={!this.state.shape}
                     onChange={this.setShape.bind(this, null)} />
                 </label>
               </div>
@@ -130,7 +130,7 @@
                 <label>
                   Default
                   <input type='radio'
-                    checked={this.state.size === null}
+                    checked={!this.state.size}
                     onChange={this.setSize.bind(this, null)} />
                 </label>
               </div>
