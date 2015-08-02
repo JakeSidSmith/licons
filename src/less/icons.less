@@ -287,9 +287,27 @@
       span {
         top: @inner-size * 0.2;
         left: @inner-size * 0.3;
-        border: (@inner-size * 0.3) solid transparent;
-        border-left: (@inner-size * 0.5) solid @licon-color;
+        border: @inner-size * 0.3 solid transparent;
+        border-left: @inner-size * 0.5 solid @licon-color;
         border-right: none;
+      }
+    }
+
+    &.licon-pause {
+      span {
+        top: @inner-size * 0.2;
+        left: @inner-size * 0.35;
+        margin-left: -@line-width;
+        height: @inner-size * 0.6;
+        border-left: @line-width * 2 solid @licon-color;
+      }
+
+      &::before {
+        top: @inner-size * 0.2;
+        left: @inner-size * 0.65;
+        margin-left: -@line-width;
+        height: @inner-size * 0.6;
+        border-left: @line-width * 2 solid @licon-color;
       }
     }
 

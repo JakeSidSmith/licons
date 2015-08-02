@@ -16,7 +16,8 @@
     'circle',
     'square',
     'square-rounded',
-    'play'
+    'play',
+    'pause'
   ];
 
   icons.sort();
