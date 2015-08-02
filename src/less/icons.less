@@ -8,6 +8,7 @@
 
 .baseLicon(@size) {
   position: relative;
+  overflow: hidden;
   display: inline-block;
   width: @size;
   height: @size;
@@ -61,9 +62,8 @@
     &.licon-menu {
       span {
         top: round(@inner-size * 0.5);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
-        margin-left: 0;
         width: @inner-size * 0.6;
         height: 0;
         border-top: @line-width solid @licon-color;
@@ -71,7 +71,7 @@
 
       &::before {
         top: round(@inner-size * 0.35);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
         width: @inner-size * 0.6;
         height: 0;
@@ -80,7 +80,7 @@
 
       &::after {
         top: round(@inner-size * 0.65);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
         width: @inner-size * 0.6;
         height: 0;
@@ -136,6 +136,16 @@
       }
     }
 
+    &.licon-bookmark {
+      span {
+        top: round(@inner-size * 0.2);
+        left: round(@inner-size * 0.3);
+        border-top: round(@inner-size * 0.4) solid @licon-color;
+        border-left: round(@inner-size * 0.2) solid @licon-color;
+        border-right: round(@inner-size * 0.2) solid @licon-color;
+        border-bottom: round(@inner-size * 0.2) solid transparent;
+      }
+    }
   }
 
 }

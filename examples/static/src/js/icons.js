@@ -6,7 +6,8 @@
     'chevron-left',
     'chevron-right',
     'chevron-up',
-    'chevron-down'
+    'chevron-down',
+    'bookmark',
   ];
 
   icons.sort();
