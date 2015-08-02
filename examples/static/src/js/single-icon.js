@@ -74,18 +74,18 @@
               </div>
               <div className='form-group'>
                 <label>
-                  On
-                  <input type='radio'
-                    checked={this.state.border}
-                    onChange={this.setBorder.bind(this, true)} />
-                </label>
-              </div>
-              <div className='form-group'>
-                <label>
                   Off
                   <input type='radio'
                     checked={!this.state.border}
                     onChange={this.setBorder.bind(this, false)} />
+                </label>
+              </div>
+              <div className='form-group'>
+                <label>
+                  On
+                  <input type='radio'
+                    checked={this.state.border}
+                    onChange={this.setBorder.bind(this, true)} />
                 </label>
               </div>
             </div>
