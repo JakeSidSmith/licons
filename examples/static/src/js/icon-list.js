@@ -10,7 +10,7 @@
         return (
           <div key={iconName} className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
             <div>
-              <Licon icon={iconName} border rounded />
+              <Licon icon={iconName} rounded />
               <div className='caption'>
                 <p>
                   {iconName}
