@@ -52,14 +52,14 @@
 
   var IconList = React.createClass({
     render: function () {
-      var icons = this.props.icons.map(function (icon) {
+      var iconList = this.props.icons.map(function (iconName) {
         return (
-          <div key={icon} className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
+          <div key={iconName} className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
             <div>
-              <Licon icon={icon} border rounded />
+              <Licon icon={iconName} border rounded />
               <div className='caption'>
                 <p>
-                  {icon}
+                  {iconName}
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@
 
       return (
         <div className='row'>
-          {icons}
+          {iconList}
         </div>
       );
     }
