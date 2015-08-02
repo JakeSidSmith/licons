@@ -8,7 +8,7 @@
     "build-js": "mkdir -p examples/static/build/js && browserify -t babelify examples/static/src/js/index.js -o examples/static/build/js/index.js",
     "watch-js": "watchify -t babelify examples/static/src/js/index.js -o examples/static/build/js/index.js -v",
     "build-less": "mkdir -p examples/static/build/css && lessc examples/static/src/less/index.less > examples/static/build/css/index.css && echo 'Less compiled'",
-    "watch-less": "watch 'npm run build-less' examples/static/src/less/",
+    "watch-less": "watch 'npm run build-less' examples/static/src/less/ & watch 'npm run build-less' src/less/",
     "build": "ulimit -n 512 && npm install && npm run build-less && npm run build-js",
     "watch": "npm run build && npm run watch-js & npm run watch-less",
     "dist-static": "cp -r examples/static/build dist/static/",
