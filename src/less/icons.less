@@ -8,17 +8,18 @@
 
 .baseLicon(@size) {
   position: relative;
-  box-sizing: border-box;
   display: inline-block;
   width: @size;
   height: @size;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid @licon-bg;
+  .boxSizing(border-box);
   .transition(ease-in-out background-color 0.1s);
 
   span,
   &::before,
   &::after {
+    .boxSizing(border-box);
     .transition(ease-in-out all 0.2s);
     .baseLiconInner();
   }
@@ -29,6 +30,8 @@
 /* @group Icons */
 
 .generateLicons(@class-name, @size, @line-width, @border-radius, @border-width) {
+
+  @inner-size: @size - (@border-width * 2);
 
   .@{class-name} {
     .baseLicon(@size);
@@ -57,29 +60,29 @@
 
     &.licon-menu {
       span {
-        top: round(@size * 0.5 - @licon-border-width-base);
-        left: @size * 0.2;
+        top: round(@inner-size * 0.5);
+        left: @inner-size * 0.2;
         margin-top: -@line-width / 2;
         margin-left: 0;
-        width: @size * 0.6 - @licon-border-width-base * 2;
+        width: @inner-size * 0.6;
         height: 0;
         border-top: @line-width solid @licon-color;
       }
 
       &::before {
-        top: round(@size * 0.35 - @licon-border-width-base);
-        left: @size * 0.2;
+        top: round(@inner-size * 0.35);
+        left: @inner-size * 0.2;
         margin-top: -@line-width / 2;
-        width: @size * 0.6 - @licon-border-width-base * 2;
+        width: @inner-size * 0.6;
         height: 0;
         border-top: @line-width solid @licon-color;
       }
 
       &::after {
-        top: round(@size * 0.65 - @licon-border-width-base);
-        left: @size * 0.2;
+        top: round(@inner-size * 0.65);
+        left: @inner-size * 0.2;
         margin-top: -@line-width / 2;
-        width: @size * 0.6 - @licon-border-width-base * 2;
+        width: @inner-size * 0.6;
         height: 0;
         border-top: @line-width solid @licon-color;
       }
