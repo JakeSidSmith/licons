@@ -11,7 +11,8 @@
     'arrow-left',
     'arrow-right',
     'arrow-up',
-    'arrow-down'
+    'arrow-down',
+    'wifi'
   ];
 
   icons.sort();
