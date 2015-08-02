@@ -15,7 +15,8 @@
     'wifi',
     'circle',
     'square',
-    'square-rounded'
+    'square-rounded',
+    'play'
   ];
 
   icons.sort();
