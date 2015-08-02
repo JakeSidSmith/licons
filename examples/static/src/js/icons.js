@@ -18,7 +18,9 @@
     'square-rounded',
     'play',
     'pause',
-    'stop'
+    'stop',
+    'fastforward',
+    'rewind'
   ];
 
   icons.sort();
