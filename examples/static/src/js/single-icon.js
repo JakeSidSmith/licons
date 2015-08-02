@@ -58,14 +58,12 @@
       return (
         <div className='row single-icon'>
           <div className='col-xs-12 col-sm-6 col-md-4 col-sm-push-3 col-md-push-4'>
-            <Licon icon='arrow-left' className='pull-left' />
             <Licon icon={this.props.icons[this.state.iconIndex]}
               border={this.state.border}
               round={this.state.shape === 'round'}
               rounded={this.state.shape === 'rounded'}
               small={this.state.size === 'small'}
               large={this.state.size === 'large'} />
-            <Licon icon='arrow-right' className='pull-right' />
             <p>
               {this.props.icons[this.state.iconIndex]}
             </p>
