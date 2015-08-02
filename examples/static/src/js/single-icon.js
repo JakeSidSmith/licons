@@ -39,11 +39,18 @@
       });
     },
 
+    setSize: function (value) {
+      this.setState({
+        size: value
+      });
+    },
+
     getInitialState: function () {
       return {
         iconIndex: 0,
         border: true,
-        shape: 'round'
+        shape: 'round',
+        size: null
       };
     },
 
@@ -55,7 +62,9 @@
             <Licon icon={this.props.icons[this.state.iconIndex]}
               border={this.state.border}
               round={this.state.shape === 'round'}
-              rounded={this.state.shape === 'rounded'} />
+              rounded={this.state.shape === 'rounded'}
+              small={this.state.size === 'small'}
+              large={this.state.size === 'large'} />
             <Licon icon='arrow-right' className='pull-right' />
             <p>
               {this.props.icons[this.state.iconIndex]}
@@ -66,16 +75,20 @@
                 <label>Border:</label>
               </div>
               <div className='form-group'>
-                <label>On</label>
-                <input type='radio'
-                  checked={this.state.border}
-                  onChange={this.setBorder.bind(this, true)} />
+                <label>
+                  On
+                  <input type='radio'
+                    checked={this.state.border}
+                    onChange={this.setBorder.bind(this, true)} />
+                </label>
               </div>
               <div className='form-group'>
-                <label>Off</label>
-                <input type='radio'
-                  checked={!this.state.border}
-                  onChange={this.setBorder.bind(this, false)} />
+                <label>
+                  Off
+                  <input type='radio'
+                    checked={!this.state.border}
+                    onChange={this.setBorder.bind(this, false)} />
+                </label>
               </div>
             </div>
 
@@ -84,22 +97,58 @@
                 <label>Shape:</label>
               </div>
               <div className='form-group'>
-                <label>Default</label>
-                <input type='radio'
-                  checked={this.state.shape === null}
-                  onChange={this.setShape.bind(this, null)} />
+                <label>
+                  Default
+                  <input type='radio'
+                    checked={this.state.shape === null}
+                    onChange={this.setShape.bind(this, null)} />
+                </label>
               </div>
               <div className='form-group'>
-                <label>Round</label>
-                <input type='radio'
-                  checked={this.state.shape === 'round'}
-                  onChange={this.setShape.bind(this, 'round')} />
+                <label>
+                  Round
+                  <input type='radio'
+                    checked={this.state.shape === 'round'}
+                    onChange={this.setShape.bind(this, 'round')} />
+                </label>
               </div>
               <div className='form-group'>
-                <label>Rounded</label>
-                <input type='radio'
-                  checked={this.state.shape === 'rounded'}
-                  onChange={this.setShape.bind(this, 'rounded')} />
+                <label>
+                  Rounded
+                  <input type='radio'
+                    checked={this.state.shape === 'rounded'}
+                    onChange={this.setShape.bind(this, 'rounded')} />
+                </label>
+              </div>
+            </div>
+
+            <div className='form-inline'>
+              <div className='form-group'>
+                <label>Size:</label>
+              </div>
+              <div className='form-group'>
+                <label>
+                  Default
+                  <input type='radio'
+                    checked={this.state.size === null}
+                    onChange={this.setSize.bind(this, null)} />
+                </label>
+              </div>
+              <div className='form-group'>
+                <label>
+                  Small
+                  <input type='radio'
+                    checked={this.state.size === 'small'}
+                    onChange={this.setSize.bind(this, 'small')} />
+                </label>
+              </div>
+              <div className='form-group'>
+                <label>
+                  Large
+                  <input type='radio'
+                    checked={this.state.size === 'large'}
+                    onChange={this.setSize.bind(this, 'large')} />
+                </label>
               </div>
             </div>
           </div>
