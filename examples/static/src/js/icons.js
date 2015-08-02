@@ -12,7 +12,10 @@
     'arrow-right',
     'arrow-up',
     'arrow-down',
-    'wifi'
+    'wifi',
+    'circle',
+    'square',
+    'rounded-square'
   ];
 
   icons.sort();

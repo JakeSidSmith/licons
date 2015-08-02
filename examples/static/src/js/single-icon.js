@@ -35,7 +35,7 @@
 
     render: function () {
       return (
-        <Licon icon={this.props.icons[this.state.iconIndex]} border circle />
+        <Licon icon={this.props.icons[this.state.iconIndex]} border round />
       );
     }
   });

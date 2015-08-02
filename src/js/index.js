@@ -20,8 +20,8 @@
       // Border radius
       if (props.rounded) {
         className = className.concat(' licon-rounded');
-      } else if (props.circle) {
-        className = className.concat(' licon-circle');
+      } else if (props.round) {
+        className = className.concat(' licon-round');
       }
 
       // Border
