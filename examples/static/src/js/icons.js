@@ -8,6 +8,10 @@
     'chevron-up',
     'chevron-down',
     'bookmark',
+    'arrow-left',
+    'arrow-right',
+    'arrow-up',
+    'arrow-down'
   ];
 
   icons.sort();
