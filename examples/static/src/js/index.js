@@ -50,7 +50,7 @@
     render: function () {
       var icons = this.props.icons.map(function (icon) {
         return (
-          <div className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
+          <div key={icon} className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
             <div>
               <Licon icon={icon} border rounded />
               <div className='caption'>
