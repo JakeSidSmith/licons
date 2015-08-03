@@ -7,50 +7,81 @@
   var React = require('react');
   var Licon = require('../../../../src/js/index.js');
 
-  var App = React.createClass({
-    displayName: 'App',
+  var icons = ['menu', 'chevron-left', 'chevron-right', 'chevron-up', 'chevron-down'];
+
+  icons.sort();
+
+  var RandomIcon = React.createClass({
+    displayName: 'RandomIcon',
+
+    incrementIndex: function incrementIndex() {
+      this.setState({
+        iconIndex: (this.state.iconIndex += 1) % this.props.icons.length
+      });
+    },
+
+    selectRandom: function selectRandom() {
+      var randomIconIndex = Math.floor(Math.random() * this.props.icons.length);
+
+      while (this.props.icons.length > 1 && randomIconIndex === this.state.iconIndex) {
+        randomIconIndex = Math.floor(Math.random() * this.props.icons.length);
+      }
+
+      this.setState({
+        iconIndex: randomIconIndex
+      });
+    },
+
+    componentDidMount: function componentDidMount() {
+      setInterval(this.selectRandom, 2000);
+    },
+
+    getInitialState: function getInitialState() {
+      return {
+        iconIndex: 0
+      };
+    },
 
     render: function render() {
+      return React.createElement(Licon, { icon: this.props.icons[this.state.iconIndex], border: true, rounded: true });
+    }
+  });
+
+  var IconList = React.createClass({
+    displayName: 'IconList',
+
+    render: function render() {
+      var iconList = this.props.icons.map(function (iconName) {
+        return React.createElement(
+          'div',
+          { key: iconName, className: 'col-xs-3 col-sm-2 col-md-1 thumbnail' },
+          React.createElement(
+            'div',
+            null,
+            React.createElement(Licon, { icon: iconName, border: true, rounded: true }),
+            React.createElement(
+              'div',
+              { className: 'caption' },
+              React.createElement(
+                'p',
+                null,
+                iconName
+              )
+            )
+          )
+        );
+      });
+
       return React.createElement(
         'div',
-        null,
-        React.createElement(
-          'p',
-          null,
-          React.createElement(Licon, { border: true }),
-          React.createElement(Licon, { border: true, rounded: true }),
-          React.createElement(Licon, { border: true, circle: true }),
-          React.createElement(Licon, { rounded: true })
-        ),
-        React.createElement(
-          'p',
-          null,
-          React.createElement(Licon, { icon: 'menu', large: true, border: true }),
-          React.createElement(Licon, { icon: 'menu', large: true, border: true, rounded: true }),
-          React.createElement(Licon, { icon: 'menu', large: true, border: true, circle: true }),
-          React.createElement(Licon, { icon: 'menu', large: true, rounded: true })
-        ),
-        React.createElement(
-          'p',
-          null,
-          React.createElement(Licon, { icon: 'menu', border: true }),
-          React.createElement(Licon, { icon: 'menu', border: true, rounded: true }),
-          React.createElement(Licon, { icon: 'menu', border: true, circle: true }),
-          React.createElement(Licon, { icon: 'menu', rounded: true })
-        ),
-        React.createElement(
-          'p',
-          null,
-          React.createElement(Licon, { icon: 'menu', small: true, border: true }),
-          React.createElement(Licon, { icon: 'menu', small: true, border: true, rounded: true }),
-          React.createElement(Licon, { icon: 'menu', small: true, border: true, circle: true }),
-          React.createElement(Licon, { icon: 'menu', small: true, rounded: true })
-        )
+        { className: 'row' },
+        iconList
       );
     }
   });
 
-  React.render(React.createElement(App, null), document.body);
+  React.render(React.createElement(RandomIcon, { icons: icons }), document.getElementById('random-icon'));
+  React.render(React.createElement(IconList, { icons: icons }), document.getElementById('icon-list'));
 })();
 
 },{"../../../../src/js/index.js":158,"react":157}],2:[function(require,module,exports){

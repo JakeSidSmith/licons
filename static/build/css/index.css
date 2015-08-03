@@ -6787,22 +6787,27 @@ button.close {
 /* @group Generate Licon Sizes */
 .licon {
   position: relative;
-  box-sizing: border-box;
   display: inline-block;
   width: 36px;
   height: 36px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out background-color 0.1s;
   -moz-transition: ease-in-out background-color 0.1s;
   -ms-transition: ease-in-out background-color 0.1s;
   -o-transition: ease-in-out background-color 0.1s;
   transition: ease-in-out background-color 0.1s;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 .licon span,
 .licon::before,
 .licon::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out all 0.2s;
   -moz-transition: ease-in-out all 0.2s;
   -ms-transition: ease-in-out all 0.2s;
@@ -6834,47 +6839,136 @@ button.close {
 }
 .licon.licon-menu span {
   top: 17px;
-  left: 7.2px;
+  left: 6.8px;
   margin-top: -1px;
   margin-left: 0;
-  width: 19.6px;
+  width: 20.4px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon.licon-menu::before {
   top: 12px;
-  left: 7.2px;
+  left: 6.8px;
   margin-top: -1px;
-  width: 19.6px;
+  width: 20.4px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon.licon-menu::after {
   top: 22px;
-  left: 7.2px;
+  left: 6.8px;
   margin-top: -1px;
-  width: 19.6px;
+  width: 20.4px;
   height: 0;
   border-top: 2px solid #555555;
 }
+.licon.licon-chevron-left span {
+  top: 10px;
+  left: 10px;
+  width: 13.6px;
+  height: 13.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon.licon-chevron-left span {
+  margin-left: 3.4px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon.licon-chevron-right span {
+  top: 10px;
+  left: 10px;
+  width: 13.6px;
+  height: 13.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon.licon-chevron-right span {
+  margin-left: -3.4px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon.licon-chevron-up span {
+  top: 10px;
+  left: 10px;
+  width: 13.6px;
+  height: 13.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon.licon-chevron-up span {
+  margin-top: 3.4px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon.licon-chevron-down span {
+  top: 10px;
+  left: 10px;
+  width: 13.6px;
+  height: 13.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon.licon-chevron-down span {
+  margin-top: -3.4px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
 .licon-small {
   position: relative;
-  box-sizing: border-box;
   display: inline-block;
   width: 24px;
   height: 24px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out background-color 0.1s;
   -moz-transition: ease-in-out background-color 0.1s;
   -ms-transition: ease-in-out background-color 0.1s;
   -o-transition: ease-in-out background-color 0.1s;
   transition: ease-in-out background-color 0.1s;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 .licon-small span,
 .licon-small::before,
 .licon-small::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out all 0.2s;
   -moz-transition: ease-in-out all 0.2s;
   -ms-transition: ease-in-out all 0.2s;
@@ -6906,47 +7000,136 @@ button.close {
 }
 .licon-small.licon-menu span {
   top: 11px;
-  left: 4.8px;
+  left: 4.4px;
   margin-top: -1px;
   margin-left: 0;
-  width: 12.4px;
+  width: 13.2px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon-small.licon-menu::before {
-  top: 7px;
-  left: 4.8px;
+  top: 8px;
+  left: 4.4px;
   margin-top: -1px;
-  width: 12.4px;
+  width: 13.2px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon-small.licon-menu::after {
-  top: 15px;
-  left: 4.8px;
+  top: 14px;
+  left: 4.4px;
   margin-top: -1px;
-  width: 12.4px;
+  width: 13.2px;
   height: 0;
   border-top: 2px solid #555555;
 }
+.licon-small.licon-chevron-left span {
+  top: 7px;
+  left: 7px;
+  width: 8.8px;
+  height: 8.8px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-small.licon-chevron-left span {
+  margin-left: 2.2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-small.licon-chevron-right span {
+  top: 7px;
+  left: 7px;
+  width: 8.8px;
+  height: 8.8px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-small.licon-chevron-right span {
+  margin-left: -2.2px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon-small.licon-chevron-up span {
+  top: 7px;
+  left: 7px;
+  width: 8.8px;
+  height: 8.8px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-small.licon-chevron-up span {
+  margin-top: 2.2px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon-small.licon-chevron-down span {
+  top: 7px;
+  left: 7px;
+  width: 8.8px;
+  height: 8.8px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-small.licon-chevron-down span {
+  margin-top: -2.2px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
 .licon-large {
   position: relative;
-  box-sizing: border-box;
   display: inline-block;
   width: 48px;
   height: 48px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out background-color 0.1s;
   -moz-transition: ease-in-out background-color 0.1s;
   -ms-transition: ease-in-out background-color 0.1s;
   -o-transition: ease-in-out background-color 0.1s;
   transition: ease-in-out background-color 0.1s;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 .licon-large span,
 .licon-large::before,
 .licon-large::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: ease-in-out all 0.2s;
   -moz-transition: ease-in-out all 0.2s;
   -ms-transition: ease-in-out all 0.2s;
@@ -6978,27 +7161,131 @@ button.close {
 }
 .licon-large.licon-menu span {
   top: 23px;
-  left: 9.6px;
+  left: 9.2px;
   margin-top: -2px;
   margin-left: 0;
-  width: 26.8px;
+  width: 27.6px;
   height: 0;
   border-top: 4px solid #555555;
 }
 .licon-large.licon-menu::before {
   top: 16px;
-  left: 9.6px;
+  left: 9.2px;
   margin-top: -2px;
-  width: 26.8px;
+  width: 27.6px;
   height: 0;
   border-top: 4px solid #555555;
 }
 .licon-large.licon-menu::after {
   top: 30px;
-  left: 9.6px;
+  left: 9.2px;
   margin-top: -2px;
-  width: 26.8px;
+  width: 27.6px;
   height: 0;
   border-top: 4px solid #555555;
 }
+.licon-large.licon-chevron-left span {
+  top: 14px;
+  left: 14px;
+  width: 18.4px;
+  height: 18.4px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-large.licon-chevron-left span {
+  margin-left: 4.6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-large.licon-chevron-right span {
+  top: 14px;
+  left: 14px;
+  width: 18.4px;
+  height: 18.4px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-large.licon-chevron-right span {
+  margin-left: -4.6px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon-large.licon-chevron-up span {
+  top: 14px;
+  left: 14px;
+  width: 18.4px;
+  height: 18.4px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-large.licon-chevron-up span {
+  margin-top: 4.6px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon-large.licon-chevron-down span {
+  top: 14px;
+  left: 14px;
+  width: 18.4px;
+  height: 18.4px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.licon-large.licon-chevron-down span {
+  margin-top: -4.6px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
 /* @end Generate Licon Sizes */
+.thumbnail {
+  text-align: center;
+  border: none;
+}
+.thumbnail > div {
+  border: 1px solid #ccc;
+  height: 110px;
+}
+.thumbnail .licon {
+  margin-top: 9px;
+}
+.thumbnail p {
+  margin: 0;
+  font-size: 11px;
+}
+@media all and (min-width: 480px) {
+  .thumbnail p {
+    font-size: 12px;
+  }
+}
