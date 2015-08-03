@@ -1,2 +1,29 @@
 @import '../../../../node_modules/bootstrap/less/bootstrap.less';
 @import '../../../../src/less/index.less';
+
+.thumbnail {
+  text-align: center;
+  border: none;
+
+  & > div {
+    border: 1px solid #ccc;
+    height: 110px;
+  }
+
+  .licon {
+    margin-top: 9px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 11px;
+  }
+}
+
+@media all and (min-width: @screen-xs-min) {
+  .thumbnail {
+    p {
+      font-size: 12px;
+    }
+  }
+}
