@@ -6787,6 +6787,7 @@ button.close {
 /* @group Generate Licon Sizes */
 .licon {
   position: relative;
+  overflow: hidden;
   display: inline-block;
   width: 36px;
   height: 36px;
@@ -6795,11 +6796,11 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s;
-  -o-transition: ease-in-out background-color 0.1s;
-  transition: ease-in-out background-color 0.1s;
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
   background-color: #ffffff;
 }
 .licon span,
@@ -6820,7 +6821,7 @@ button.close {
 .licon.licon-rounded {
   border-radius: 4px;
 }
-.licon.licon-circle {
+.licon.licon-round {
   border-radius: 50%;
 }
 .licon.licon-border {
@@ -6839,16 +6840,15 @@ button.close {
 }
 .licon.licon-menu span {
   top: 17px;
-  left: 6.8px;
+  left: 7px;
   margin-top: -1px;
-  margin-left: 0;
   width: 20.4px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon.licon-menu::before {
   top: 12px;
-  left: 6.8px;
+  left: 7px;
   margin-top: -1px;
   width: 20.4px;
   height: 0;
@@ -6856,7 +6856,7 @@ button.close {
 }
 .licon.licon-menu::after {
   top: 22px;
-  left: 6.8px;
+  left: 7px;
   margin-top: -1px;
   width: 20.4px;
   height: 0;
@@ -6946,8 +6946,251 @@ button.close {
   -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
+.licon.licon-bookmark span {
+  top: 7px;
+  left: 10px;
+  border-top: 14px solid #555555;
+  border-left: 7px solid #555555;
+  border-right: 7px solid #555555;
+  border-bottom: 7px solid transparent;
+}
+.licon.licon-arrow-left span {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 20.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 10.2px 1px;
+  -moz-transform-origin: 10.2px 1px;
+  -ms-transform-origin: 10.2px 1px;
+  -o-transform-origin: 10.2px 1px;
+  transform-origin: 10.2px 1px;
+}
+.licon.licon-arrow-left::before {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 10.2px;
+  height: 10.2px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon.licon-arrow-right span {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 20.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 10.2px 1px;
+  -moz-transform-origin: 10.2px 1px;
+  -ms-transform-origin: 10.2px 1px;
+  -o-transform-origin: 10.2px 1px;
+  transform-origin: 10.2px 1px;
+}
+.licon.licon-arrow-right::before {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 10.2px;
+  height: 10.2px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon.licon-arrow-right span {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.licon.licon-arrow-right::before {
+  left: 27px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon.licon-arrow-up span {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 20.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 10.2px 1px;
+  -moz-transform-origin: 10.2px 1px;
+  -ms-transform-origin: 10.2px 1px;
+  -o-transform-origin: 10.2px 1px;
+  transform-origin: 10.2px 1px;
+}
+.licon.licon-arrow-up::before {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 10.2px;
+  height: 10.2px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon.licon-arrow-up span {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.licon.licon-arrow-up::before {
+  top: 7px;
+  left: 17px;
+  margin-left: -1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon.licon-arrow-down span {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 20.4px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 10.2px 1px;
+  -moz-transform-origin: 10.2px 1px;
+  -ms-transform-origin: 10.2px 1px;
+  -o-transform-origin: 10.2px 1px;
+  transform-origin: 10.2px 1px;
+}
+.licon.licon-arrow-down::before {
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 10.2px;
+  height: 10.2px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon.licon-arrow-down span {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.licon.licon-arrow-down::before {
+  top: 27px;
+  left: 17px;
+  margin-left: -1px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.licon.licon-wifi span {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 10px;
+  left: 0;
+  margin-top: -1px;
+  width: 34px;
+  height: 34px;
+}
+.licon.licon-wifi::before {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 17px;
+  left: 7px;
+  margin-top: -1px;
+  width: 20px;
+  height: 20px;
+}
+.licon.licon-wifi::after {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 24px;
+  left: 14px;
+  margin-top: -1px;
+  width: 7px;
+  height: 7px;
+}
+.licon.licon-circle span {
+  top: 6.8px;
+  left: 6.8px;
+  width: 20.4px;
+  height: 20.4px;
+  border: 2px solid #555555;
+}
+.licon.licon-circle span {
+  border-radius: 50%;
+}
+.licon.licon-square span {
+  top: 6.8px;
+  left: 6.8px;
+  width: 20.4px;
+  height: 20.4px;
+  border: 2px solid #555555;
+}
+.licon.licon-square-rounded span {
+  top: 6.8px;
+  left: 6.8px;
+  width: 20.4px;
+  height: 20.4px;
+  border: 2px solid #555555;
+}
+.licon.licon-square-rounded span {
+  border-radius: 5.1px;
+}
 .licon-small {
   position: relative;
+  overflow: hidden;
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -6956,11 +7199,11 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s;
-  -o-transition: ease-in-out background-color 0.1s;
-  transition: ease-in-out background-color 0.1s;
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
   background-color: #ffffff;
 }
 .licon-small span,
@@ -6981,7 +7224,7 @@ button.close {
 .licon-small.licon-rounded {
   border-radius: 2px;
 }
-.licon-small.licon-circle {
+.licon-small.licon-round {
   border-radius: 50%;
 }
 .licon-small.licon-border {
@@ -7000,16 +7243,15 @@ button.close {
 }
 .licon-small.licon-menu span {
   top: 11px;
-  left: 4.4px;
+  left: 4px;
   margin-top: -1px;
-  margin-left: 0;
   width: 13.2px;
   height: 0;
   border-top: 2px solid #555555;
 }
 .licon-small.licon-menu::before {
   top: 8px;
-  left: 4.4px;
+  left: 4px;
   margin-top: -1px;
   width: 13.2px;
   height: 0;
@@ -7017,7 +7259,7 @@ button.close {
 }
 .licon-small.licon-menu::after {
   top: 14px;
-  left: 4.4px;
+  left: 4px;
   margin-top: -1px;
   width: 13.2px;
   height: 0;
@@ -7107,8 +7349,251 @@ button.close {
   -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
+.licon-small.licon-bookmark span {
+  top: 4px;
+  left: 7px;
+  border-top: 9px solid #555555;
+  border-left: 4px solid #555555;
+  border-right: 4px solid #555555;
+  border-bottom: 4px solid transparent;
+}
+.licon-small.licon-arrow-left span {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 13.2px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 6.6px 1px;
+  -moz-transform-origin: 6.6px 1px;
+  -ms-transform-origin: 6.6px 1px;
+  -o-transform-origin: 6.6px 1px;
+  transform-origin: 6.6px 1px;
+}
+.licon-small.licon-arrow-left::before {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 6.6px;
+  height: 6.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-small.licon-arrow-right span {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 13.2px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 6.6px 1px;
+  -moz-transform-origin: 6.6px 1px;
+  -ms-transform-origin: 6.6px 1px;
+  -o-transform-origin: 6.6px 1px;
+  transform-origin: 6.6px 1px;
+}
+.licon-small.licon-arrow-right::before {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 6.6px;
+  height: 6.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-small.licon-arrow-right span {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.licon-small.licon-arrow-right::before {
+  left: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon-small.licon-arrow-up span {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 13.2px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 6.6px 1px;
+  -moz-transform-origin: 6.6px 1px;
+  -ms-transform-origin: 6.6px 1px;
+  -o-transform-origin: 6.6px 1px;
+  transform-origin: 6.6px 1px;
+}
+.licon-small.licon-arrow-up::before {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 6.6px;
+  height: 6.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-small.licon-arrow-up span {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.licon-small.licon-arrow-up::before {
+  top: 4px;
+  left: 11px;
+  margin-left: -1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon-small.licon-arrow-down span {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 13.2px;
+  height: 0;
+  border-top: 2px solid #555555;
+  -webkit-transform-origin: 6.6px 1px;
+  -moz-transform-origin: 6.6px 1px;
+  -ms-transform-origin: 6.6px 1px;
+  -o-transform-origin: 6.6px 1px;
+  transform-origin: 6.6px 1px;
+}
+.licon-small.licon-arrow-down::before {
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 6.6px;
+  height: 6.6px;
+  border-top: 2px solid #555555;
+  border-left: 2px solid #555555;
+  -webkit-transform-origin: 1px 1px;
+  -moz-transform-origin: 1px 1px;
+  -ms-transform-origin: 1px 1px;
+  -o-transform-origin: 1px 1px;
+  transform-origin: 1px 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-small.licon-arrow-down span {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.licon-small.licon-arrow-down::before {
+  top: 18px;
+  left: 11px;
+  margin-left: -1px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.licon-small.licon-wifi span {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 7px;
+  left: 0;
+  margin-top: -1px;
+  width: 22px;
+  height: 22px;
+}
+.licon-small.licon-wifi::before {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 11px;
+  left: 4px;
+  margin-top: -1px;
+  width: 13px;
+  height: 13px;
+}
+.licon-small.licon-wifi::after {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 2px solid #555555;
+  top: 15px;
+  left: 9px;
+  margin-top: -1px;
+  width: 4px;
+  height: 4px;
+}
+.licon-small.licon-circle span {
+  top: 4.4px;
+  left: 4.4px;
+  width: 13.2px;
+  height: 13.2px;
+  border: 2px solid #555555;
+}
+.licon-small.licon-circle span {
+  border-radius: 50%;
+}
+.licon-small.licon-square span {
+  top: 4.4px;
+  left: 4.4px;
+  width: 13.2px;
+  height: 13.2px;
+  border: 2px solid #555555;
+}
+.licon-small.licon-square-rounded span {
+  top: 4.4px;
+  left: 4.4px;
+  width: 13.2px;
+  height: 13.2px;
+  border: 2px solid #555555;
+}
+.licon-small.licon-square-rounded span {
+  border-radius: 3.3px;
+}
 .licon-large {
   position: relative;
+  overflow: hidden;
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -7117,11 +7602,11 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s;
-  -o-transition: ease-in-out background-color 0.1s;
-  transition: ease-in-out background-color 0.1s;
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
   background-color: #ffffff;
 }
 .licon-large span,
@@ -7142,7 +7627,7 @@ button.close {
 .licon-large.licon-rounded {
   border-radius: 6px;
 }
-.licon-large.licon-circle {
+.licon-large.licon-round {
   border-radius: 50%;
 }
 .licon-large.licon-border {
@@ -7161,16 +7646,15 @@ button.close {
 }
 .licon-large.licon-menu span {
   top: 23px;
-  left: 9.2px;
+  left: 9px;
   margin-top: -2px;
-  margin-left: 0;
   width: 27.6px;
   height: 0;
   border-top: 4px solid #555555;
 }
 .licon-large.licon-menu::before {
   top: 16px;
-  left: 9.2px;
+  left: 9px;
   margin-top: -2px;
   width: 27.6px;
   height: 0;
@@ -7178,7 +7662,7 @@ button.close {
 }
 .licon-large.licon-menu::after {
   top: 30px;
-  left: 9.2px;
+  left: 9px;
   margin-top: -2px;
   width: 27.6px;
   height: 0;
@@ -7268,7 +7752,267 @@ button.close {
   -o-transform: rotate(225deg);
   transform: rotate(225deg);
 }
+.licon-large.licon-bookmark span {
+  top: 9px;
+  left: 14px;
+  border-top: 18px solid #555555;
+  border-left: 9px solid #555555;
+  border-right: 9px solid #555555;
+  border-bottom: 9px solid transparent;
+}
+.licon-large.licon-arrow-left span {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 27.6px;
+  height: 0;
+  border-top: 4px solid #555555;
+  -webkit-transform-origin: 13.8px 2px;
+  -moz-transform-origin: 13.8px 2px;
+  -ms-transform-origin: 13.8px 2px;
+  -o-transform-origin: 13.8px 2px;
+  transform-origin: 13.8px 2px;
+}
+.licon-large.licon-arrow-left::before {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 13.8px;
+  height: 13.8px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 2px 2px;
+  -moz-transform-origin: 2px 2px;
+  -ms-transform-origin: 2px 2px;
+  -o-transform-origin: 2px 2px;
+  transform-origin: 2px 2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-large.licon-arrow-right span {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 27.6px;
+  height: 0;
+  border-top: 4px solid #555555;
+  -webkit-transform-origin: 13.8px 2px;
+  -moz-transform-origin: 13.8px 2px;
+  -ms-transform-origin: 13.8px 2px;
+  -o-transform-origin: 13.8px 2px;
+  transform-origin: 13.8px 2px;
+}
+.licon-large.licon-arrow-right::before {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 13.8px;
+  height: 13.8px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 2px 2px;
+  -moz-transform-origin: 2px 2px;
+  -ms-transform-origin: 2px 2px;
+  -o-transform-origin: 2px 2px;
+  transform-origin: 2px 2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-large.licon-arrow-right span {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.licon-large.licon-arrow-right::before {
+  left: 37px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.licon-large.licon-arrow-up span {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 27.6px;
+  height: 0;
+  border-top: 4px solid #555555;
+  -webkit-transform-origin: 13.8px 2px;
+  -moz-transform-origin: 13.8px 2px;
+  -ms-transform-origin: 13.8px 2px;
+  -o-transform-origin: 13.8px 2px;
+  transform-origin: 13.8px 2px;
+}
+.licon-large.licon-arrow-up::before {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 13.8px;
+  height: 13.8px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 2px 2px;
+  -moz-transform-origin: 2px 2px;
+  -ms-transform-origin: 2px 2px;
+  -o-transform-origin: 2px 2px;
+  transform-origin: 2px 2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-large.licon-arrow-up span {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.licon-large.licon-arrow-up::before {
+  top: 9px;
+  left: 23px;
+  margin-left: -2px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.licon-large.licon-arrow-down span {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 27.6px;
+  height: 0;
+  border-top: 4px solid #555555;
+  -webkit-transform-origin: 13.8px 2px;
+  -moz-transform-origin: 13.8px 2px;
+  -ms-transform-origin: 13.8px 2px;
+  -o-transform-origin: 13.8px 2px;
+  transform-origin: 13.8px 2px;
+}
+.licon-large.licon-arrow-down::before {
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 13.8px;
+  height: 13.8px;
+  border-top: 4px solid #555555;
+  border-left: 4px solid #555555;
+  -webkit-transform-origin: 2px 2px;
+  -moz-transform-origin: 2px 2px;
+  -ms-transform-origin: 2px 2px;
+  -o-transform-origin: 2px 2px;
+  transform-origin: 2px 2px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.licon-large.licon-arrow-down span {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.licon-large.licon-arrow-down::before {
+  top: 37px;
+  left: 23px;
+  margin-left: -2px;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.licon-large.licon-wifi span {
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #555555;
+  top: 14px;
+  left: 0;
+  margin-top: -2px;
+  width: 46px;
+  height: 46px;
+}
+.licon-large.licon-wifi::before {
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #555555;
+  top: 23px;
+  left: 9px;
+  margin-top: -2px;
+  width: 28px;
+  height: 28px;
+}
+.licon-large.licon-wifi::after {
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #555555;
+  top: 32px;
+  left: 18px;
+  margin-top: -2px;
+  width: 9px;
+  height: 9px;
+}
+.licon-large.licon-circle span {
+  top: 9.2px;
+  left: 9.2px;
+  width: 27.6px;
+  height: 27.6px;
+  border: 4px solid #555555;
+}
+.licon-large.licon-circle span {
+  border-radius: 50%;
+}
+.licon-large.licon-square span {
+  top: 9.2px;
+  left: 9.2px;
+  width: 27.6px;
+  height: 27.6px;
+  border: 4px solid #555555;
+}
+.licon-large.licon-square-rounded span {
+  top: 9.2px;
+  left: 9.2px;
+  width: 27.6px;
+  height: 27.6px;
+  border: 4px solid #555555;
+}
+.licon-large.licon-square-rounded span {
+  border-radius: 6.9px;
+}
 /* @end Generate Licon Sizes */
+.single-icon {
+  text-align: center;
+}
+.single-icon > div {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.single-icon .form-inline {
+  margin-top: 30px;
+  text-align: left;
+}
+.single-icon .form-inline .form-group {
+  margin-right: 10px;
+  display: inline;
+}
+.single-icon .form-inline input {
+  margin-left: 5px;
+}
 .thumbnail {
   text-align: center;
   border: none;
