@@ -15,7 +15,12 @@
     'wifi',
     'circle',
     'square',
-    'square-rounded'
+    'square-rounded',
+    'play',
+    'pause',
+    'stop',
+    'fast-forward',
+    'rewind'
   ];
 
   icons.sort();
