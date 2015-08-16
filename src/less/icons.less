@@ -8,13 +8,14 @@
 
 .baseLicon(@size) {
   position: relative;
+  overflow: hidden;
   display: inline-block;
   width: @size;
   height: @size;
   cursor: pointer;
   border: 1px solid @licon-bg;
   .boxSizing(border-box);
-  .transition(ease-in-out background-color 0.1s);
+  .transition2(ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s);
 
   span,
   &::before,
@@ -41,7 +42,7 @@
       border-radius: @border-radius;
     }
 
-    &.licon-circle {
+    &.licon-round {
       border-radius: 50%;
     }
 
@@ -61,9 +62,8 @@
     &.licon-menu {
       span {
         top: round(@inner-size * 0.5);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
-        margin-left: 0;
         width: @inner-size * 0.6;
         height: 0;
         border-top: @line-width solid @licon-color;
@@ -71,7 +71,7 @@
 
       &::before {
         top: round(@inner-size * 0.35);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
         width: @inner-size * 0.6;
         height: 0;
@@ -80,7 +80,7 @@
 
       &::after {
         top: round(@inner-size * 0.65);
-        left: @inner-size * 0.2;
+        left: round(@inner-size * 0.2);
         margin-top: -@line-width / 2;
         width: @inner-size * 0.6;
         height: 0;
@@ -133,6 +133,153 @@
       span {
         margin-top: @inner-size * -0.1;
         .transform(rotate(180 + 45deg));
+      }
+    }
+
+    &.licon-bookmark {
+      span {
+        top: round(@inner-size * 0.2);
+        left: round(@inner-size * 0.3);
+        border-top: round(@inner-size * 0.4) solid @licon-color;
+        border-left: round(@inner-size * 0.2) solid @licon-color;
+        border-right: round(@inner-size * 0.2) solid @licon-color;
+        border-bottom: round(@inner-size * 0.2) solid transparent;
+      }
+    }
+
+    .arrowHorizontalBase() {
+      span {
+        top: round(@inner-size * 0.5);
+        left: round(@inner-size * 0.2);
+        margin-top: -@line-width / 2;
+        width: @inner-size * 0.6;
+        height: 0;
+        border-top: @line-width solid @licon-color;
+        .transformOrigin(@inner-size * 0.3 @line-width / 2)
+      }
+
+      &::before {
+        top: round(@inner-size * 0.5);
+        left: round(@inner-size * 0.2);
+        margin-top: -@line-width / 2;
+        width: @inner-size * 0.3;
+        height: @inner-size * 0.3;
+        border-top: @line-width solid @licon-color;
+        border-left: @line-width solid @licon-color;
+        .transformOrigin(@line-width / 2 @line-width / 2);
+        .transform(rotate(-45deg));
+      }
+    }
+
+    &.licon-arrow-left {
+      .arrowHorizontalBase();
+    }
+
+    &.licon-arrow-right {
+      .arrowHorizontalBase();
+
+      span {
+        .transform(rotate(180deg));
+      }
+
+      &::before {
+        left: round(@inner-size * 0.8);
+        .transform(rotate(180 - 45deg));
+      }
+    }
+
+    &.licon-arrow-up {
+      .arrowHorizontalBase();
+
+      span {
+        .transform(rotate(90deg));
+      }
+
+      &::before {
+        top: round(@inner-size * 0.2);
+        left: round(@inner-size * 0.5);
+        margin-left: -@line-width / 2;
+        .transform(rotate(45deg));
+      }
+    }
+
+    &.licon-arrow-down {
+      .arrowHorizontalBase();
+
+      span {
+        .transform(rotate(180 + 90deg));
+      }
+
+      &::before {
+        top: round(@inner-size * 0.8);
+        left: round(@inner-size * 0.5);
+        margin-left: -@line-width / 2;
+        .transform(rotate(180 + 45deg));
+      }
+    }
+
+    &.licon-wifi {
+      span {
+        border-radius: 50%;
+        border: @line-width solid transparent;
+        border-top: @line-width solid @licon-color;
+        top: round(@inner-size * 0.3);
+        left: 0;
+        margin-top: -@line-width / 2;
+        width: @inner-size;
+        height: @inner-size;
+      }
+
+      &::before {
+        border-radius: 50%;
+        border: @line-width solid transparent;
+        border-top: @line-width solid @licon-color;
+        top: round(@inner-size * 0.5);
+        left: round(@inner-size * 0.2);
+        margin-top: -@line-width / 2;
+        width: round(@inner-size * 0.6);
+        height: round(@inner-size * 0.6);
+      }
+
+      &::after {
+        border-radius: 50%;
+        border: @line-width solid transparent;
+        border-top: @line-width solid @licon-color;
+        top: round(@inner-size * 0.7);
+        left: round(@inner-size * 0.4);
+        margin-top: -@line-width / 2;
+        width: round(@inner-size * 0.2);
+        height: round(@inner-size * 0.2);
+      }
+    }
+
+    .circleSquareBase() {
+      span {
+        top: @inner-size * 0.2;
+        left: @inner-size * 0.2;
+        width: @inner-size * 0.6;
+        height: @inner-size * 0.6;
+        border: @line-width solid @licon-color;
+      }
+    }
+
+    &.licon-circle {
+      .circleSquareBase();
+
+      span {
+        border-radius: 50%;
+      }
+    }
+
+    &.licon-square {
+      .circleSquareBase();
+    }
+
+    &.licon-square-rounded {
+      .circleSquareBase();
+
+      span {
+        border-radius: @inner-size * 0.15;
       }
     }
 

@@ -20,8 +20,8 @@
       // Border radius
       if (props.rounded) {
         className = className.concat(' licon-rounded');
-      } else if (props.circle) {
-        className = className.concat(' licon-circle');
+      } else if (props.round) {
+        className = className.concat(' licon-round');
       }
 
       // Border
@@ -46,7 +46,11 @@
 
     render: function () {
       return (
-        <span className={this.state.className}>
+        <span {...this.props}
+          className={
+            this.state.className +
+            (this.props.className ? ' '.concat(this.props.className) : '')
+          }>
           <span></span>
         </span>
       );
