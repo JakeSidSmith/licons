@@ -15,7 +15,7 @@
   cursor: pointer;
   border: 1px solid @licon-bg;
   .boxSizing(border-box);
-  .transition2(ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s);
+  .transition(ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;);
 
   span,
   &::before,
@@ -280,6 +280,19 @@
 
       span {
         border-radius: @inner-size * 0.15;
+      }
+    }
+
+    &.licon-spinner {
+      .circleSquareBase();
+
+      span {
+        border-bottom: @line-width solid transparent;
+        border-radius: 50%;
+        -webkit-animation: spin linear 1s infinite;
+        -moz-animation: spin linear 1s infinite;
+        -o-animation: spin linear 1s infinite;
+        animation: spin linear 1s infinite;
       }
     }
 
