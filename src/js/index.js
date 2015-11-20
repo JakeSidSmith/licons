@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  var React = require('react');
-
   var getLicon = function (React, _) {
     return React.createClass({
       getClassName: function () {
@@ -60,18 +58,18 @@
       exports = module.exports = getLicon(React, _);
     }
     exports.Licon = getLicon(React, _);
-  } else if (typeof root !== 'undefined' &&
-    typeof root.React !== 'undefined' &&
-    typeof root._ !== 'undefined') {
-    // Add to root object
-    root.Licon = getLicon(root.React, root._);
-  }
+  } else if (typeof root !== 'undefined') {
+    if (typeof root.React !== 'undefined' && typeof root._ !== 'undefined') {
+      // Add to root object
+      root.Licon = getLicon(root.React, root._);
+    }
 
-  // Define for requirejs
-  if (root && typeof root.define === 'function' && root.define.amd) {
-    root.define(['react', 'underscore'], function(React, _) {
-      return getLicon(React, _);
-    });
+    // Define for requirejs
+    if (typeof root.define === 'function' && root.define.amd) {
+      root.define(['react', 'underscore'], function(defineReact, define_) {
+        return getLicon(defineReact, define_);
+      });
+    }
   }
 
 })();
