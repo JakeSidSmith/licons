@@ -3,57 +3,47 @@
 
   var React = require('react');
 
-  var getLicon = function (React) {
+  var getLicon = function (React, _) {
     return React.createClass({
-      genClassName: function (props) {
+      getClassName: function () {
         var className = 'licon';
 
         // Icon type
-        className = className.concat(props.icon ? ' licon-'.concat(props.icon) : '');
+        if (this.props.icon) {
+          className += ' licon-' + this.props.icon;
+        }
 
         // Size
-        if (props.large) {
-          className = className.concat(' licon-large');
-        } else if (props.small) {
-          className = className.concat(' licon-small');
+        if (this.props.large) {
+          className += ' licon-large';
+        } else if (this.props.small) {
+          className += ' licon-small';
         }
 
         // Border radius
-        if (props.rounded) {
-          className = className.concat(' licon-rounded');
-        } else if (props.round) {
-          className = className.concat(' licon-round');
+        if (this.props.rounded) {
+          className += ' licon-rounded';
+        } else if (this.props.round) {
+          className += ' licon-round';
         }
 
         // Border
-        if (props.border) {
-          className = className.concat(' licon-border');
+        if (this.props.border) {
+          className += ' licon-border';
         }
 
         return className;
       },
 
-      componentWillReceiveProps: function (nextProps) {
-        this.setState({
-          className: this.genClassName(nextProps)
-        });
-      },
-
-      getInitialState: function () {
-        return {
-          className: this.genClassName(this.props)
-        };
-      },
-
       render: function () {
+        var props = _.extend({}, this.props, { className: this.getClassName() });
+
         return (
-          <span {...this.props}
-            className={
-              this.state.className +
-              (this.props.className ? ' '.concat(this.props.className) : '')
-            }>
-            <span></span>
-          </span>
+          React.createElement(
+            'span',
+            props,
+            React.createElement('span')
+          )
         );
       }
     });
@@ -65,19 +55,22 @@
   // Export for commonjs / browserify
   if (typeof exports !== 'undefined') {
     var React = require('react');
+    var _ = require('underscore');
     if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = getLicon(React);
+      exports = module.exports = getLicon(React, _);
     }
-    exports.Licon = getLicon(React);
-  } else if (typeof root !== 'undefined' && typeof root.React !== 'undefined') {
+    exports.Licon = getLicon(React, _);
+  } else if (typeof root !== 'undefined' &&
+    typeof root.React !== 'undefined' &&
+    typeof root._ !== 'undefined') {
     // Add to root object
-    root.Licon = getLicon(root.React);
+    root.Licon = getLicon(root.React, root._);
   }
 
   // Define for requirejs
   if (root && typeof root.define === 'function' && root.define.amd) {
-    root.define(['react'], function(React) {
-      return getLicon(React);
+    root.define(['react', 'underscore'], function(React, _) {
+      return getLicon(React, _);
     });
   }
 
