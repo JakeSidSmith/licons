@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/JakeSidSmith/licons",
   "dependencies": {
-    "react": "=0.13.3",
+    "react": "^0.12.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
