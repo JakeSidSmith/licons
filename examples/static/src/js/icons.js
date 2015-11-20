@@ -16,7 +16,7 @@
     'circle',
     'square',
     'square-rounded',
-    'spinner'
+    'loading-spinner'
   ];
 
   icons.sort();
