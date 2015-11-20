@@ -1,61 +1,75 @@
 (function () {
   'use strict';
 
-  var React = require('react');
+  var getLicon = function (React, _) {
+    return React.createClass({
+      getClassName: function () {
+        var className = 'licon';
 
-  var Licon = React.createClass({
-    genClassName: function (props) {
-      var className = 'licon';
+        // Icon type
+        if (this.props.icon) {
+          className += ' licon-' + this.props.icon;
+        }
 
-      // Icon type
-      className = className.concat(props.icon ? ' licon-'.concat(props.icon) : '');
+        // Size
+        if (this.props.large) {
+          className += ' licon-large';
+        } else if (this.props.small) {
+          className += ' licon-small';
+        }
 
-      // Size
-      if (props.large) {
-        className = className.concat(' licon-large');
-      } else if (props.small) {
-        className = className.concat(' licon-small');
+        // Border radius
+        if (this.props.rounded) {
+          className += ' licon-rounded';
+        } else if (this.props.round) {
+          className += ' licon-round';
+        }
+
+        // Border
+        if (this.props.border) {
+          className += ' licon-border';
+        }
+
+        return className;
+      },
+
+      render: function () {
+        var props = _.extend({}, this.props, { className: this.getClassName() });
+
+        return (
+          React.createElement(
+            'span',
+            props,
+            React.createElement('span')
+          )
+        );
       }
+    });
+  };
 
-      // Border radius
-      if (props.rounded) {
-        className = className.concat(' licon-rounded');
-      } else if (props.round) {
-        className = className.concat(' licon-round');
-      }
+  // Establish the root object, `window` in the browser, or `exports` on the server.
+  var root = this || window;
 
-      // Border
-      if (props.border) {
-        className = className.concat(' licon-border');
-      }
-
-      return className;
-    },
-
-    componentWillReceiveProps: function (nextProps) {
-      this.setState({
-        className: this.genClassName(nextProps)
-      });
-    },
-
-    getInitialState: function () {
-      return {
-        className: this.genClassName(this.props)
-      };
-    },
-
-    render: function () {
-      return (
-        <span {...this.props}
-          className={
-            this.state.className +
-            (this.props.className ? ' '.concat(this.props.className) : '')
-          }>
-          <span></span>
-        </span>
-      );
+  // Export for commonjs / browserify
+  if (typeof exports !== 'undefined') {
+    var React = require('react');
+    var _ = require('underscore');
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = getLicon(React, _);
     }
-  });
+    exports.Licon = getLicon(React, _);
+  } else if (typeof root !== 'undefined') {
+    if (typeof root.React !== 'undefined' && typeof root._ !== 'undefined') {
+      // Add to root object
+      root.Licon = getLicon(root.React, root._);
+    }
 
-  module.exports = Licon;
+    // Define for requirejs
+    if (typeof root.define === 'function' && root.define.amd) {
+      root.define(['react', 'underscore'], function(defineReact, define_) {
+        return getLicon(defineReact, define_);
+      });
+    }
+  }
+
 })();

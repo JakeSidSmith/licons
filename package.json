@@ -13,7 +13,7 @@
     "watch": "npm run build && npm run watch-js & npm run watch-less",
     "dist-static": "cp -r examples/static/build dist/static/",
     "dist": "npm run build && mkdir -p dist/static/build && npm run dist-static && cp -r examples/index.html dist/",
-    "lint": "eslint 'src/js/' 'examples/static/src/js/' && jscs 'src/js/' 'examples/static/src/js/'",
+    "lint": "eslint 'src/js/' 'examples/static/src/js/'",
     "test": "npm run lint"
   },
   "repository": {
@@ -44,17 +44,16 @@
   },
   "homepage": "https://github.com/JakeSidSmith/licons",
   "dependencies": {
-    "react": "=0.13.3"
+    "react": "^0.12.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babelify": "=6.1.3",
     "bootstrap": "=3.3.5",
     "browserify": "=11.0.1",
-    "eslint": "=0.24.1",
-    "eslint-plugin-react": "=3.1.0",
-    "esprima-fb": "=15001.1.0-dev-harmony-fb",
+    "eslint": "=1.5.1",
+    "eslint-plugin-react": "=3.9.0",
     "http-server": "=0.8.0",
-    "jscs": "=2.0.0",
     "less": "=2.5.1",
     "watch": "=0.16.0",
     "watchify": "=3.3.1"

@@ -8,10 +8,10 @@
     render: function () {
       var iconList = this.props.icons.map(function (iconName) {
         return (
-          <div key={iconName} className='col-xs-3 col-sm-2 col-md-1 thumbnail'>
+          <div key={iconName} className="col-xs-3 col-sm-2 col-md-1 thumbnail">
             <div>
               <Licon icon={iconName} rounded />
-              <div className='caption'>
+              <div className="caption">
                 <p>
                   {iconName}
                 </p>
@@ -22,7 +22,7 @@
       });
 
       return (
-        <div className='row'>
+        <div className="row">
           {iconList}
         </div>
       );
