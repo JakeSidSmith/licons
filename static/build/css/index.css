@@ -6780,6 +6780,38 @@ button.close {
 /* @end Colors */
 /* @group Sizes */
 /* @end Sizes */
+@-webkit-keyframes spin {
+  0 {
+    -webkit-transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  0 {
+    -moz-transform: rotate(0);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  0 {
+    -o-transform: rotate(0);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0 {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* @group Base Styles */
 /* @end Base Styles */
 /* @group Icons */
@@ -7188,6 +7220,21 @@ button.close {
 .licon.licon-square-rounded span {
   border-radius: 5.1px;
 }
+.licon.licon-loading-spinner span {
+  top: 6.8px;
+  left: 6.8px;
+  width: 20.4px;
+  height: 20.4px;
+  border: 2px solid #555555;
+}
+.licon.licon-loading-spinner span {
+  border-bottom: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spin linear 1s infinite;
+  -moz-animation: spin linear 1s infinite;
+  -o-animation: spin linear 1s infinite;
+  animation: spin linear 1s infinite;
+}
 .licon-small {
   position: relative;
   overflow: hidden;
@@ -7591,6 +7638,21 @@ button.close {
 .licon-small.licon-square-rounded span {
   border-radius: 3.3px;
 }
+.licon-small.licon-loading-spinner span {
+  top: 4.4px;
+  left: 4.4px;
+  width: 13.2px;
+  height: 13.2px;
+  border: 2px solid #555555;
+}
+.licon-small.licon-loading-spinner span {
+  border-bottom: 2px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spin linear 1s infinite;
+  -moz-animation: spin linear 1s infinite;
+  -o-animation: spin linear 1s infinite;
+  animation: spin linear 1s infinite;
+}
 .licon-large {
   position: relative;
   overflow: hidden;
@@ -7993,6 +8055,21 @@ button.close {
 }
 .licon-large.licon-square-rounded span {
   border-radius: 6.9px;
+}
+.licon-large.licon-loading-spinner span {
+  top: 9.2px;
+  left: 9.2px;
+  width: 27.6px;
+  height: 27.6px;
+  border: 4px solid #555555;
+}
+.licon-large.licon-loading-spinner span {
+  border-bottom: 4px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: spin linear 1s infinite;
+  -moz-animation: spin linear 1s infinite;
+  -o-animation: spin linear 1s infinite;
+  animation: spin linear 1s infinite;
 }
 /* @end Generate Licon Sizes */
 .single-icon {

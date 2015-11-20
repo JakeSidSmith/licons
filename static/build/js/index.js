@@ -49,7 +49,7 @@
 (function () {
   'use strict';
 
-  var icons = ['menu', 'chevron-left', 'chevron-right', 'chevron-up', 'chevron-down', 'bookmark', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-down', 'wifi', 'circle', 'square', 'square-rounded'];
+  var icons = ['menu', 'chevron-left', 'chevron-right', 'chevron-up', 'chevron-down', 'bookmark', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-down', 'wifi', 'circle', 'square', 'square-rounded', 'loading-spinner'];
 
   icons.sort();
 
@@ -326,7 +326,9 @@ function drainQueue() {
         currentQueue = queue;
         queue = [];
         while (++queueIndex < len) {
-            currentQueue[queueIndex].run();
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
         }
         queueIndex = -1;
         len = queue.length;
@@ -378,7 +380,6 @@ process.binding = function (name) {
     throw new Error('process.binding is not supported');
 };
 
-// TODO(shtylman)
 process.cwd = function () { return '/' };
 process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
