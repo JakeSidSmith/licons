@@ -45,6 +45,12 @@
       });
     },
 
+    setHidden: function (value) {
+      this.setState({
+        hidden: value
+      });
+    },
+
     getInitialState: function () {
       return {
         iconIndex: 0,
@@ -63,7 +69,8 @@
               round={this.state.shape === 'round'}
               rounded={this.state.shape === 'rounded'}
               small={this.state.size === 'small'}
-              large={this.state.size === 'large'} />
+              large={this.state.size === 'large'}
+              hidden={this.state.hidden} />
             <p>
               {this.props.icons[this.state.iconIndex]}
             </p>
@@ -146,6 +153,28 @@
                   <input type="radio"
                     checked={this.state.size === 'large'}
                     onChange={this.setSize.bind(this, 'large')} />
+                </label>
+              </div>
+            </div>
+
+            <div className="form-inline">
+              <div className="form-group">
+                <label>Hidden:</label>
+              </div>
+              <div className="form-group">
+                <label>
+                  True
+                  <input type="radio"
+                    checked={this.state.hidden}
+                    onChange={this.setHidden.bind(this, true)} />
+                </label>
+              </div>
+              <div className="form-group">
+                <label>
+                  False
+                  <input type="radio"
+                    checked={!this.state.hidden}
+                    onChange={this.setHidden.bind(this, false)} />
                 </label>
               </div>
             </div>
