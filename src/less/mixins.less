@@ -12,6 +12,14 @@
   transition+: @value;
 }
 
+.transitionTransform(@value) {
+  -webkit-transition+: @value -webkit-transform;
+  -moz-transition+: @value -moz-transform;
+  -ms-transition+: @value -ms-transform;
+  -o-transition+: @value -o-transform;
+  transition+: @value transform;
+}
+
 .transform(@value) {
   -webkit-transform: @value;
   -moz-transform: @value;

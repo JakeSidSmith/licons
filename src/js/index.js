@@ -30,6 +30,10 @@
           className += ' licon-border';
         }
 
+        if (this.props.hidden) {
+          className += ' licon-hidden';
+        }
+
         return className;
       },
 
