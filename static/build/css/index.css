@@ -6828,11 +6828,16 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -webkit-transform;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -moz-transform;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -ms-transform;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -o-transform;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s transform;
   background-color: #ffffff;
 }
 .licon span,
@@ -7235,6 +7240,14 @@ button.close {
   -o-animation: spin linear 1s infinite;
   animation: spin linear 1s infinite;
 }
+.licon.licon-hidden {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: 0;
+}
 .licon-small {
   position: relative;
   overflow: hidden;
@@ -7246,11 +7259,16 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -webkit-transform;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -moz-transform;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -ms-transform;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -o-transform;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s transform;
   background-color: #ffffff;
 }
 .licon-small span,
@@ -7653,6 +7671,14 @@ button.close {
   -o-animation: spin linear 1s infinite;
   animation: spin linear 1s infinite;
 }
+.licon-small.licon-hidden {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: 0;
+}
 .licon-large {
   position: relative;
   overflow: hidden;
@@ -7664,11 +7690,16 @@ button.close {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
-  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -webkit-transform;
+  -moz-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -moz-transform;
+  -ms-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -ms-transform;
+  -o-transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s -o-transform;
+  transition: ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s transform;
   background-color: #ffffff;
 }
 .licon-large span,
@@ -8070,6 +8101,14 @@ button.close {
   -moz-animation: spin linear 1s infinite;
   -o-animation: spin linear 1s infinite;
   animation: spin linear 1s infinite;
+}
+.licon-large.licon-hidden {
+  -webkit-transform: scale(0, 0);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -o-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: 0;
 }
 /* @end Generate Licon Sizes */
 .single-icon {

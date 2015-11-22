@@ -123,6 +123,12 @@
       });
     },
 
+    setHidden: function setHidden(value) {
+      this.setState({
+        hidden: value
+      });
+    },
+
     getInitialState: function getInitialState() {
       return {
         iconIndex: 0,
@@ -144,7 +150,8 @@
             round: this.state.shape === 'round',
             rounded: this.state.shape === 'rounded',
             small: this.state.size === 'small',
-            large: this.state.size === 'large' }),
+            large: this.state.size === 'large',
+            hidden: this.state.hidden }),
           React.createElement(
             'p',
             null,
@@ -282,6 +289,43 @@
                 React.createElement('input', { type: 'radio',
                   checked: this.state.size === 'large',
                   onChange: this.setSize.bind(this, 'large') })
+              )
+            )
+          ),
+          React.createElement(
+            'div',
+            { className: 'form-inline' },
+            React.createElement(
+              'div',
+              { className: 'form-group' },
+              React.createElement(
+                'label',
+                null,
+                'Hidden:'
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'form-group' },
+              React.createElement(
+                'label',
+                null,
+                'True',
+                React.createElement('input', { type: 'radio',
+                  checked: this.state.hidden,
+                  onChange: this.setHidden.bind(this, true) })
+              )
+            ),
+            React.createElement(
+              'div',
+              { className: 'form-group' },
+              React.createElement(
+                'label',
+                null,
+                'False',
+                React.createElement('input', { type: 'radio',
+                  checked: !this.state.hidden,
+                  onChange: this.setHidden.bind(this, false) })
               )
             )
           )
@@ -20197,6 +20241,10 @@ module.exports = require('./lib/React');
         // Border
         if (this.props.border) {
           className += ' licon-border';
+        }
+
+        if (this.props.hidden) {
+          className += ' licon-hidden';
         }
 
         return className;
