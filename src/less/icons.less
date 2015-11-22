@@ -15,7 +15,8 @@
   cursor: pointer;
   border: 1px solid @licon-bg;
   .boxSizing(border-box);
-  .transition(ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s;);
+  .transform(scale(1, 1));
+  .transitionTransform(ease-in-out background-color 0.1s, ease-in-out border-radius 0.1s, ease-in-out 0.1s opacity, ease-in-out 0.1s;);
 
   span,
   &::before,
@@ -294,6 +295,11 @@
         -o-animation: spin linear 1s infinite;
         animation: spin linear 1s infinite;
       }
+    }
+
+    &.licon-hidden {
+      .transform(scale(0, 0));
+      opacity: 0;
     }
 
   }
